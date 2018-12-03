@@ -27,8 +27,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/dropbox/dropbox-sdk-go-unofficial/dropbox"
-	"github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/users"
+	"github.com/herval/dropbox-sdk-go-unofficial/dropbox"
+	"github.com/herval/dropbox-sdk-go-unofficial/dropbox/users"
 )
 
 func generateURL(base string, namespace string, route string) string {

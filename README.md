@@ -1,4 +1,4 @@
-# Dropbox SDK for Go [UNOFFICIAL] [![GoDoc](https://godoc.org/github.com/dropbox/dropbox-sdk-go-unofficial/dropbox?status.svg)](https://godoc.org/github.com/dropbox/dropbox-sdk-go-unofficial/dropbox) [![Build Status](https://travis-ci.org/dropbox/dropbox-sdk-go-unofficial.svg?branch=master)](https://travis-ci.org/dropbox/dropbox-sdk-go-unofficial) [![Go Report Card](https://goreportcard.com/badge/github.com/dropbox/dropbox-sdk-go-unofficial)](https://goreportcard.com/report/github.com/dropbox/dropbox-sdk-go-unofficial)
+# Dropbox SDK for Go [UNOFFICIAL] [![GoDoc](https://godoc.org/github.com/herval/dropbox-sdk-go-unofficial/dropbox?status.svg)](https://godoc.org/github.com/herval/dropbox-sdk-go-unofficial/dropbox) [![Build Status](https://travis-ci.org/dropbox/dropbox-sdk-go-unofficial.svg?branch=master)](https://travis-ci.org/dropbox/dropbox-sdk-go-unofficial) [![Go Report Card](https://goreportcard.com/badge/github.com/herval/dropbox-sdk-go-unofficial)](https://goreportcard.com/report/github.com/herval/dropbox-sdk-go-unofficial)
 
 An **UNOFFICIAL** Go SDK for integrating with the Dropbox API v2. Tested with Go 1.5+
 
@@ -11,24 +11,24 @@ An **UNOFFICIAL** Go SDK for integrating with the Dropbox API v2. Tested with Go
 
 ### Uh OK, so why are you releasing this?
 
-  * the SDK, while unofficial, _is_ usable. See [dbxcli](https://github.com/dropbox/dbxcli) for an example application built using the SDK
+  * the SDK, while unofficial, _is_ usable. See [dbxcli](https://github.com/herval/dbxcli) for an example application built using the SDK
   * we would like to get feedback from the community and evaluate the level of interest/enthusiasm before investing into official supporting one more SDK
 
 ## Installation
 
 ```sh
-$ go get github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/...
+$ go get github.com/herval/dropbox-sdk-go-unofficial/dropbox/...
 ```
 
 For most applications, you should just import the relevant namespace(s) only. The SDK exports the following sub-packages:
 
-* `github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/auth`
-* `github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/files`
-* `github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/sharing`
-* `github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/team`
-* `github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/users`
+* `github.com/herval/dropbox-sdk-go-unofficial/dropbox/auth`
+* `github.com/herval/dropbox-sdk-go-unofficial/dropbox/files`
+* `github.com/herval/dropbox-sdk-go-unofficial/dropbox/sharing`
+* `github.com/herval/dropbox-sdk-go-unofficial/dropbox/team`
+* `github.com/herval/dropbox-sdk-go-unofficial/dropbox/users`
 
-Additionally, the base `github.com/dropbox/dropbox-sdk-go-unofficial/dropbox` package exports some configuration and helper methods.
+Additionally, the base `github.com/herval/dropbox-sdk-go-unofficial/dropbox` package exports some configuration and helper methods.
 
 ## Usage
 
@@ -39,8 +39,8 @@ First, you need to [register a new "app"](https://dropbox.com/developers/apps) t
 Once you've created an app, you can get an access token from the app's console. Note that this token will only work for the Dropbox account the token is associated with.
 
 ```go
-import "github.com/dropbox/dropbox-sdk-go-unofficial/dropbox"
-import "github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/users"
+import "github.com/herval/dropbox-sdk-go-unofficial/dropbox"
+import "github.com/herval/dropbox-sdk-go-unofficial/dropbox/users"
 
 func main() {
   config := dropbox.Config{
@@ -88,7 +88,7 @@ Please read the [API docs](https://www.dropbox.com/developers/documentation/http
 
 ## Code Generation
 
-This SDK is automatically generated using the public [Dropbox API spec](https://github.com/dropbox/dropbox-api-spec) and [Stone](https://github.com/dropbox/stone). See this [README](https://github.com/dropbox/dropbox-sdk-go-unofficial/blob/master/generator/README.md)
+This SDK is automatically generated using the public [Dropbox API spec](https://github.com/herval/dropbox-api-spec) and [Stone](https://github.com/herval/stone). See this [README](https://github.com/herval/dropbox-sdk-go-unofficial/blob/master/generator/README.md)
 for more details on how code is generated. 
 
 ## Caveats
