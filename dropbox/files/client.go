@@ -35,6 +35,7 @@ import (
 
 // Client interface describes all routes in this namespace
 type Client interface {
+	HttpClient() *http.Client
 	// AlphaGetMetadata : Returns the metadata for a file or folder. This is an
 	// alpha endpoint compatible with the properties API. Note: Metadata for the
 	// root folder is unsupported.
@@ -676,6 +677,10 @@ func (dbx *apiImpl) Copy(arg *RelocationArg) (res IsMetadata, err error) {
 type CopyBatchAPIError struct {
 	dropbox.APIError
 	EndpointError struct{} `json:"error"`
+}
+
+func (dbx *apiImpl) HttpClient() *http.Client {
+	return dbx.Client
 }
 
 func (dbx *apiImpl) CopyBatch(arg *RelocationBatchArg) (res *RelocationBatchLaunch, err error) {
